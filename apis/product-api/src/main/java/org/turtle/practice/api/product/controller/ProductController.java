@@ -1,10 +1,7 @@
 package org.turtle.practice.api.product.controller;
 
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.turtle.practice.api.product.entity.Product;
 import org.turtle.practice.api.product.service.ProductService;
 
@@ -15,8 +12,12 @@ public class ProductController {
 
     @PostMapping("/product")
     public Product addProduct(@RequestBody Product product){
-        productService.addProduct(product);
-        return product;
+        return productService.addProduct(product);
+    }
+
+    @GetMapping("/product/{productCode}")
+    public Product getProduct(@PathVariable String productCode, @RequestParam("couponCode") String couponCode){
+        return productService.getProductById(productCode, couponCode);
     }
 
 }

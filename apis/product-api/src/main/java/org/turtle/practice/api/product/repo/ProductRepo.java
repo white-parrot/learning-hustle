@@ -6,4 +6,7 @@ import org.turtle.practice.api.product.entity.Product;
 
 @Repository
 public interface ProductRepo extends JpaRepository<Product, Long> {
+
+    Product findByCode(String code);
+
 }

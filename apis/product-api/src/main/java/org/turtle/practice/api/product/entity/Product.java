@@ -21,5 +21,9 @@ public class Product {
     String name;
     String description;
     Double price;
+    @Transient
+    Double offerPrice;
+    @Transient
+    String totalDiscount;
 
 }
