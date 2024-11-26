@@ -18,7 +18,7 @@ public class Coupon {
     private Long id;
     String code;
     Long discount;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-ddTHH:mm:ss")
     LocalDateTime expiryDate;
 
 }

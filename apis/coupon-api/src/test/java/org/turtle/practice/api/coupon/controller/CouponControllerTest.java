@@ -16,7 +16,7 @@ public class CouponControllerTest {
         coupon.setId(12121L);
         coupon.setCode("DIWALISALE");
         coupon.setDiscount(10L);
-        coupon.setExpiryDate(LocalDateTime.parse("2025-11-21T10:15:30"));
+        coupon.setExpiryDate(LocalDateTime.parse("2025-11-21T10:15"));
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());

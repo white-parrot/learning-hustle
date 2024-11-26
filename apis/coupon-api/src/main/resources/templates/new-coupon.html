@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin UI : Add New Coupon</title>
+</head>
+<body>
+
+<form name="add-new-coupon" action="#" th:action="@{/ui/save-coupon}" method="post">
+    Code:<input name="code" />
+    Discount:<input name="discount">
+    Expiry Date:<input type="datetime-local" name="expiryDate">
+    <input type="submit" value="save" />
+</form>
+
+</body>
+</html>
